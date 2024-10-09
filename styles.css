@@ -1,54 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Techlete offers top-quality IT services including computer repair, software troubleshooting, data recovery, and more.">
-    <meta name="keywords" content="IT support, computer repair, tech solutions, software troubleshooting, data recovery">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Techlete Computer Repair</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
-</head>
-<body>
-    <header>
-        <h1>Welcome to Techlete IT Solutions!</h1>
-    </header>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-image: url('Techlete.jpg'); /* Ensure the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 
-    <nav aria-label="Main Navigation">
-        <a href="#mission">Mission Statement</a>
-        <a href="#services">Our Services</a>
-    </nav>
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
 
-    <main class="container">
-        <article class="content">
-            <section id="mission">
-                <h2>Mission Statement</h2>
-                <p>At Techlete, our mission is to provide reliable, efficient, and comprehensive computer repair to individuals and businesses...</p>
-            </section>
+header {
+    top: 0;
+}
 
-            <section id="services">
-                <h2>Our Services</h2>
-                <ul>
-                    <li><strong>Computer Repair Services</strong>
-                        <ul>
-                            <li>Hardware diagnostics and repair</li>
-                            <li>Software troubleshooting and repair</li>
-                            <li>Operating system installation and upgrades</li>
-                            <li>Data recovery and backup solutions</li>
-                            <li>Virus and malware removal</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-        </article>
-    </main>
+footer {
+    bottom: 0;
+}
 
-    <footer>
-        <p>Thank you for visiting Techlete IT Solutions! Contact Gabriel Gonzales at 505-600-1969 for more information.</p>
-        <p>Follow us:</p>
-        <a href="https://www.facebook.com/techlete" target="_blank"><img src="facebook-icon.png" alt="Facebook" width="20"></a>
-        <a href="https://www.twitter.com/techlete" target="_blank"><img src="twitter-icon.png" alt="Twitter" width="20"></a>
-    </footer>
-</body>
-</html>
+header h1, footer p {
+    margin: 0;
+}
+
+main {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+section {
+    padding: 2em;
+    margin: 1em 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+ul li strong {
+    display: block;
+    margin-top: 1em;
+}
+
+ul ul {
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    height: 100%;
+    padding-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    margin-left: 220px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        top: 60px;
+        height: auto;
+    }
+    .content {
+        margin-left: 0;
+    }
+    header, footer {
+        position: static;
+    }
+}
